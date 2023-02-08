@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "Rust-GRPC"
+name = "Rust-gRPC"
 version = "0.1.0"
 dependencies = [
  "prost",

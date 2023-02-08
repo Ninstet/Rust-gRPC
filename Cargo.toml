@@ -1,5 +1,5 @@
 [package]
-name = "Rust-GRPC"
+name = "Rust-gRPC"
 version = "0.1.0"
 edition = "2021"
 
@@ -14,7 +14,7 @@ name = "payments-client"
 path = "src/client.rs"
 
 [dependencies]
-tonic = "0.8.2" # GRPC implementation for Rust
+tonic = "0.8.2" # gRPC implementation for Rust
 prost = "0.11.0" # ProtoBuf implementation for Rust
 tokio = {verison = "1.0", features = ["macros", "rt-multi-thread"]}
 
