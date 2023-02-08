@@ -1,7 +1,7 @@
 use tonic::{transport::Server, Request, Response, Status};
 
 use payments::bitcoin_server::{Bitcoin, BitcoinServer};
-use payments::{BtcPaymentResponse, BtcPaymentRequest};
+use payments::{BtcPaymentRequest, BtcPaymentResponse};
 
 pub mod payments {
     tonic::include_proto!("payments");
@@ -16,7 +16,6 @@ impl Bitcoin for BitcoinService {
         &self,
         request: Request<BtcPaymentRequest>,
     ) -> Result<Response<BtcPaymentResponse>, Status> {
-
         println!("Got request: {:?}", request);
 
         let req = request.into_inner();
